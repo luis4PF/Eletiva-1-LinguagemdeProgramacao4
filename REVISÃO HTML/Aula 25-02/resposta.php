@@ -10,7 +10,8 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="container">
+
     <h1>Cálculos</h1>
 
     <?php 
@@ -22,16 +23,18 @@
         echo "Subtração: " .($valor1 - $valor2);
         echo "Multiplicação: " .($valor1 * $valor2);
         echo "<br>";
-        if ($valor2 != 0){
-            echo "Divisão: "($valor1 / $valor2);
-        } else { 
+        if ($valor2 != 0)
+            echo "Divisão: " .($valor1 / $valor2);
+        else  
             echo "Não é possível realizar a divisão por zero";
-        } 
-        if ($valor1 % 2 == 0){
-            echo "valor 1 é par";
-        }
-    ?>
+        
+        $resultado = $valor1 % 2 == 0 ? "Valor 1 é par!" : "valor 1 é impar";
+        echo $resultado // outra possibilidade de "if
 
+        
+    ?>
+    <!-- valor1 = "0" valor2 = 0 - if valor1 == valor2 = true // if if valor1 === valor2 false porque um é string e o outro é inteiro -->
+    <!-- alt shift f alinhar o codigo -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
