@@ -18,6 +18,15 @@
   <?php
   $produto1 = $_POST["produto1"];
   $valor1 = $_POST["valor1"];
+  
+  $troco = ($valor1 - $produto1);
+
+  if ($valor1 == $produto1)
+    echo "NÃO HÁ TROCO";
+
+  else if ($valor1 < $produto1)
+    echo "VALOR PAGO É INSUFICIENTE";
+  
   ?>
   <form method="post">
     <div class="row">
@@ -40,7 +49,7 @@
         <label for="resultTroco1" class="label-control">
           TROCO:
         </label>
-        <input type="text" name="resultTroco1" value="R$<?php echo ($valor1 - $produto1); ?>" 
+        <input type="text" name="resultTroco1" value="R$<?php echo ($troco); ?>" 
           id="resultTroco" class="form-control" />
       </div>
     </div>
