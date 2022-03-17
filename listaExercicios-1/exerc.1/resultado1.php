@@ -25,7 +25,7 @@
     echo "NÃO HÁ TROCO";
 
   else if ($valor1 < $produto1)
-    echo "VALOR PAGO É INSUFICIENTE";
+    echo "VALOR PAGO É INSUFICIENTE FALTA: R$" . ($produto1 - $valor1);
   
   ?>
   <form method="post">
