@@ -1,72 +1,78 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RESULTADO 1</title>
-  </head>
-  <body class="container">
-    <h1>RESULTADO 1</h1>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <?php
-    for ($i = 1; $i <= 1; $i++) {
-        $vetor[$i] = $_POST["valor$i"];
-    }
+  <title>RESULTADO 2</title>
+</head>
+<br>
 
-    foreach($vetor as $chave => $valor){
-        echo "POSIÇÃO DO VALOR: $valor INFORMADO É: $chave";
-        echo "<br>";
-        
-    }
+<body class="container">
+  <h1>RESULTADO 2</h1>
 
-    ?>
-    <div class="col">
-        <label for="valor2" class="label-control mt-4"> <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
-          INFORME O VALOR E DESCUBRA EM QUE POSIÇÃO ESTA LOCALIZADO:
-        </label>
-        <input type="number" step="any" name="valor2" placeholder="1, 2, 3..." 
-          id="valor2" class="form-control" />
-      </div>
+  <?PHP
 
-      <div class="row mt-3">
-        <div class="col">
-          <button type="submit" class="btn btn-danger">
-            RESULTADO
-          </button>
-        </div>
-      </div>
+  $result1 = $_POST["result1"];
+  
+  for ($i = 1; $i <= 20; $i++) {
+    $vetor[$i] = $_POST["valor$i"];
 
-      <?php
-    $valor2 = $_POST["valor2"];
+  }
 
-    for ($i = 1; $i <= 1; $i++) {
-        $vetor[$i] = $_POST["valor$i"];
-     
-    }
+  if ($vetor[$i] != $result1)
+    echo "O VALOR NÃO ESTÁ PRESENTE";
+    echo "<br>";
+  ?>
 
-    foreach($vetor as $v => $valor2){
-        echo "POSIÇÃO DO VALOR: $valor INFORMADO É: $valor2";
-        echo "<br>";
-        
-    }
-
-    ?>
+  <div class="col mt-3 ">
+    <label for="result1" class="label-control">
+      <b> VALOR PESQUISADO </b>
+      <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
+    </label>
+    <input type="text" step="any" name="result1" value="<?php echo ($result1) ?>" 
+      id="result1" class="form-control" />
+  </div>
+  <br>
+  <?php
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+
+
+
+  foreach ($vetor as $chave => $valor) {
+
+    if ($valor <= 10 && $valor >= 0)
+      echo "**VALOR PERMITIDO E INFORMADO É: $valor\n";
+
+    else
+      echo "!!VALOR NÃO PERMITIDO E INFORMADO É: $valor\n";
+
+    if ($result1 == $valor)
+      echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
+    echo "<br>";
+  }
+
+  ?>
+
+  <br> <br>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
