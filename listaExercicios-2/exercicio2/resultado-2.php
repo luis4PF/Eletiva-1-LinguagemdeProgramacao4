@@ -20,14 +20,16 @@
 
   $result1 = $_POST["result1"];
   
-  for ($i = 1; $i <= 20; $i++) {
-    $vetor[$i] = $_POST["valor$i"];
 
+  for ($i = 1; $i <= 3; $i++) {
+    $vetor[$i] = $_POST["valor$i"];
   }
 
-  if ($vetor[$i] != $result1)
-    echo "O VALOR NÃO ESTÁ PRESENTE";
-    echo "<br>";
+  if ($vetor != $result1)
+      echo "O VALOR NÃO ESTÁ PRESENTE";
+      echo "<br>";
+
+  
   ?>
 
   <div class="col mt-3 ">
@@ -52,7 +54,8 @@
     if ($result1 == $valor)
       echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
       echo "<br>";
-  }
+
+    }
 
   ?>
 
