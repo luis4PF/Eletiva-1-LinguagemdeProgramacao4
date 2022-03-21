@@ -41,12 +41,6 @@
   <br>
   <?php
 
-
-
-
-
-
-
   foreach ($vetor as $chave => $valor) {
 
     if ($valor <= 10 && $valor >= 0)
@@ -57,7 +51,7 @@
 
     if ($result1 == $valor)
       echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
-    echo "<br>";
+      echo "<br>";
   }
 
   ?>
