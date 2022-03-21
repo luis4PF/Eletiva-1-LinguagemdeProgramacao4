@@ -17,19 +17,7 @@
   <h1>RESULTADO 2</h1>
 
   <?PHP
-
   $result1 = $_POST["result1"];
-  
-
-  for ($i = 1; $i <= 3; $i++) {
-    $vetor[$i] = $_POST["valor$i"];
-  }
-
-  if ($vetor != $result1)
-      echo "O VALOR NÃO ESTÁ PRESENTE";
-      echo "<br>";
-
-  
   ?>
 
   <div class="col mt-3 ">
@@ -42,6 +30,9 @@
   </div>
   <br>
   <?php
+  for ($i = 1; $i <= 3; $i++) {
+    $vetor[$i] = $_POST["valor$i"];
+  }
 
   foreach ($vetor as $chave => $valor) {
 
@@ -54,8 +45,10 @@
     if ($result1 == $valor)
       echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
       echo "<br>";
+  }
 
-    }
+    if ($valor !== $result1) 
+      echo "NÃO ESTÁ PRESENTE";
 
   ?>
 
