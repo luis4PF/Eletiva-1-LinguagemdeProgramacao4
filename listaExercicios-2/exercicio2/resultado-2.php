@@ -25,30 +25,39 @@
       <b> VALOR PESQUISADO </b>
       <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
     </label>
-    <input type="text" step="any" name="result1" value="<?php echo ($result1) ?>" 
-      id="result1" class="form-control" />
+    <input type="text" step="any" name="result1" value="<?php echo ($result1) ?>" id="result1" class="form-control" />
   </div>
   <br>
   <?php
+
   for ($i = 1; $i <= 3; $i++) {
     $vetor[$i] = $_POST["valor$i"];
   }
-
-  foreach ($vetor as $chave => $valor) {
-
-    if ($valor <= 10 && $valor >= 0)
-      echo "**VALOR PERMITIDO E INFORMADO É: $valor\n";
-
-    else
+  if ($vetor[$i] != $result1) {
+    for ($i = 1; $i < 2; $i++) {
+      if ($vetor[$i] <> $result1) {
+        echo "<b>VALOR INFORMADO NÃO ESTÁ PRESENTE</b>";
+        echo "<br>";
+      }
+    }
+  }
+  for ($i = 1; $i <= 3; $i++) {
+    if ($vetor[$i] >= 10 && $vetor[$i] <= 0)
       echo "!!VALOR NÃO PERMITIDO E INFORMADO É: $valor\n";
+  }
+  foreach ($vetor as $chave => $valor) {
+    for ($i = 1; $i < 2; $i++) {
+      if ($valor <= 10 && $valor >= 0)
+        echo "<b>**VALOR PERMITIDO E INFORMADO É: $valor\n </b>";
 
-    if ($result1 == $valor)
-      echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
+      if ($result1 == $valor)
+        echo "E ESTÁ LOCALIZADO NA $chave POSIÇÃO";
       echo "<br>";
+    }
   }
 
-    if ($valor !== $result1) 
-      echo "NÃO ESTÁ PRESENTE";
+
+
 
   ?>
 
