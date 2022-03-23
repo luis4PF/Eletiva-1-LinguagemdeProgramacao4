@@ -19,7 +19,7 @@
   <form method="post" action="resultado-2.php">
     <div class="row col-4">
       <?php
-      for ($i = 1; $i <= 3; $i++) {
+      for ($i = 1; $i <= 20; $i++) {
 
 
       ?>

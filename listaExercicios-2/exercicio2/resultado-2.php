@@ -18,6 +18,20 @@
 
   <?PHP
   $result1 = $_POST["result1"];
+
+  for ($i = 1; $i <= 20; $i++) {
+    $vetor[$i] = $_POST["valor$i"];
+  }
+
+  foreach ($vetor as $valor){
+    for ($i = 20; $i <= 2; $i++) {
+      if ($valor != $result1) {
+        echo "<b>VALOR INFORMADO NÃO ESTÁ PRESENTE</b>";
+        echo "<br>";
+      }
+    }
+  }
+
   ?>
 
   <div class="col mt-3 ">
@@ -29,19 +43,7 @@
   </div>
   <br>
   <?php
-
-  for ($i = 1; $i <= 3; $i++) {
-    $vetor[$i] = $_POST["valor$i"];
-  }
-  if ($vetor[$i] != $result1) {
-    for ($i = 1; $i < 2; $i++) {
-      if ($vetor[$i] <> $result1) {
-        echo "<b>VALOR INFORMADO NÃO ESTÁ PRESENTE</b>";
-        echo "<br>";
-      }
-    }
-  }
-  for ($i = 1; $i <= 3; $i++) {
+  for ($i = 1; $i < 2; $i++) {
     if ($vetor[$i] >= 10 && $vetor[$i] <= 0)
       echo "!!VALOR NÃO PERMITIDO E INFORMADO É: $valor\n";
   }
@@ -55,10 +57,6 @@
       echo "<br>";
     }
   }
-
-
-
-
   ?>
 
   <br> <br>
