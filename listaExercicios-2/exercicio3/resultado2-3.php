@@ -9,42 +9,30 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <title>RESULTADO 2</title>
+  <title>RESULTADO 3</title>
 </head>
-<br>
 
 <body class="container">
-  <h1>RESULTADO 2</h1>
+  <h1>RESULTADO 3</h1>
 
-  <?PHP
-  $result1 = $_POST["result1"];
-
+  <?php
   for ($i = 1; $i <= 3; $i++) {
     $vetor[$i] = $_POST["valor$i"];
   }
+  
+  foreach ($vetor as $chave => $valor){
+  $existe = 0;
+    for ($i = 1; $i <= 3; $i++)
+      if ($vetor[$i] == $valor)
+        $existe++;
 
-  ?>
-
-  <?php
-  if ($result1 > 10 || $result1 < 1)
-    echo "Valor informado não é válido";
-
-  else  {
-    $nao_existe = true;
-    foreach ($vetor as $chave => $valor) {
-      if ($result1 == $valor) {
-        $nao_existe = false;
-        echo "O VALOR INFORMADO ESTÁ LOCALIZADO NA $chave POSIÇÃO";
-        echo "<br>";
-      }
-    }
-
-    if ($nao_existe)
-      echo "<B>O VALOR INFORMADO NÃO EXITE NO VETOR</B>";
+  if ($existe >= 2)
+    $vetor[$chave] = "-";
+  echo "<b>VALOR: </b> "  .$vetor[$chave]. "<br>";
   }
+
   ?>
 
-  <br> <br>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
