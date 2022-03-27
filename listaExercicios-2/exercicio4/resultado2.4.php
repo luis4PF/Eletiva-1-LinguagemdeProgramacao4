@@ -8,53 +8,29 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <title>EXERCICIO 2</title>
+  <br>
+  <title>RESULTADO 4</title>
 </head>
 
 <body class="container">
-  <br>
-  <h1>EXERCÍCIO 2</h1>
+  <h1>RESULTADO 4</h1>
 
-  <form method="post" action="resultado-2.php">
-    <div class="row col-4">
-      <?php
-      for ($i = 1; $i <= 20; $i++) {
+  <?php
+  $soma = 0;
 
+  for ($i = 1; $i <= 10; $i++) {
+    $vetor[$i] = $_POST["valor$i"];
+    
+  }
+  foreach($vetor as $valor)
+    $soma = $soma + $valor;
+      echo "<b>DIVISÃO</b>: $soma <b>/</b> 10";
+      echo "<br>";
+      echo "<b>MÉDIA: </b>" . ($soma / 10);
+    
 
-      ?>
-        <div class="col">
-          <label for="valor<?= $i ?>" class="label-control mt-4">
-            <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
-            INFORME O VALOR DE 0 A 10:
-          </label>
-          <input type="number" step="any" name="valor<?= $i ?>" placeholder="1, 2, 3..." id="valor<?= $i ?>" class="form-control" />
-        </div>
-      <?php
-      }
+  ?>
 
-      ?>
-      
-      <div class="col mt-3 ">
-        <label for="result1" class="label-control">
-          <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
-          INFORME O VALOR DE E DESCUBRA EM QUE POSIÇÃO ESTÁ LOCALIZADO:
-        </label>
-        <input type="number" step="any" name="result1" placeholder="1, 2, 3..." 
-          id="result1" class="form-control" />
-      </div>
-
-      <br>
-
-      <div class="row mt-3">
-        <div class="col">
-          <button type="submit" class="btn btn-danger">
-            RESULTADO
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->

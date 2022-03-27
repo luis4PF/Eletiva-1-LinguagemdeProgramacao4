@@ -11,15 +11,22 @@
 
     <title>Hello, world!</title>
 </head>
-
+<br>
 <body class="container">
     <h1>Hello, world!</h1>
 
     <?PHP
     $valor = array(1, 2, 3, 4, 5);
-
-    echo $valor[0];
+    $valortotal = 0;
+    foreach($valor as $contas){
+        $valortotal += $contas["valor"];
+    }
+    
+    echo "SOMA: " . array_sum($valor);
+    
     echo "<br>";
+
+    
 
     $teste = 2;
 

@@ -19,7 +19,7 @@
   <?PHP
   $result1 = $_POST["result1"];
 
-  for ($i = 1; $i <= 3; $i++) {
+  for ($i = 1; $i <= 20; $i++) {
     $vetor[$i] = $_POST["valor$i"];
   }
 
@@ -27,14 +27,14 @@
 
   <?php
   if ($result1 > 10 || $result1 < 1)
-    echo "Valor informado não é válido";
+    echo "O VALOR PESQUISADO NÃO É VÁLIDO";
 
   else  {
     $nao_existe = true;
     foreach ($vetor as $chave => $valor) {
       if ($result1 == $valor) {
         $nao_existe = false;
-        echo "O VALOR INFORMADO ESTÁ LOCALIZADO NA $chave POSIÇÃO";
+        echo "O VALOR $valor INFORMADO ESTÁ LOCALIZADO NA $chave POSIÇÃO";
         echo "<br>";
       }
     }

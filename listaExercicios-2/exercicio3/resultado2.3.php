@@ -16,13 +16,13 @@
   <h1>RESULTADO 3</h1>
 
   <?php
-  for ($i = 1; $i <= 3; $i++) {
+  for ($i = 1; $i <= 6; $i++) {
     $vetor[$i] = $_POST["valor$i"];
   }
   
   foreach ($vetor as $chave => $valor){
   $existe = 0;
-    for ($i = 1; $i <= 3; $i++)
+    for ($i = 1; $i <= 6; $i++)
       if ($vetor[$i] == $valor)
         $existe++;
 

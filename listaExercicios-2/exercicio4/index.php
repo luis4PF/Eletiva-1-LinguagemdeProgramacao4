@@ -7,18 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>EXERCICIO 3</title>
+    <br>
+    <title>EXERCICIO 4</title>
   </head>
   <body class="container">
-    <h1>EXERCICIO 3</h1>
-    <form method="post" action="resultado2.3.php">
+    <h1>EXERCICIO 4</h1>
+    <form method="post" action="resultado2.4.php">
+    <b> INFORME 10 VALORES E DESCUBRA SUA MÉDIA </b>
     <?php
-        for ($i = 1; $i <= 6; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
     ?>
       <div class="col">
         <label for="valor<?= $i ?>" class="label-control"> <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
-          INFORME VÁRIOS VALORES, EM CASO DE NÚMERO REPETIDO SERÁ APRESENTADO "-"
+          INFORME UM VALOR:
         </label>
         <input type="number" step="any" name="valor<?= $i ?>" placeholder="1, 2, 3..." 
           id="valor<?= $i ?>" class="form-control" />
