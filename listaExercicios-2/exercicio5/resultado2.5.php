@@ -20,28 +20,41 @@
     $vetor[$i] = $_POST["valor$i"];
   }
   echo "<b> NORMAL </b><br>";
-  foreach($vetor as $chave => $valor)
-  echo "[$chave] $valor <br>";
+  foreach ($vetor as $chave => $valor)
+    echo "[$chave] $valor <br>";
   echo "<br>";
 
   $ordem = 0;
   $maior = 1;
-  while ($maior == 1){
+  while ($maior == 1) {
     $maior = 0;
-    for ($i = 1; $i < 4; $i++){
-      if ($vetor[$i] > $vetor[$i + 1]){
+    for ($i = 1; $i < 4; $i++) {
+      if ($vetor[$i] > $vetor[$i + 1])
         $ordem = $vetor[$i];
-        $vetor[$i] = $vetor[$i + 1];
-        $vetor[$i + 1] = $ordem;
-        $maior = 1;
-      }
+      $vetor[$i] = $vetor[$i + 1];
+      $vetor[$i + 1] = $ordem;
+      $maior = 1;
     }
   }
   echo "<b> CRESCENTE </b><br>";
   foreach ($vetor as $chave => $valor)
     echo "[$chave] $valor <br>";
-    echo "<br>";
+  echo "<br>";
 
+  while ($maior == 1) {
+    $maior = 0;
+    for ($i = 1; $i < 4; $i++) {
+      if ($vetor[$i] < $vetor[$i + 1])
+        $ordem = $vetor[$i];
+      $vetor[$i] = $vetor[$i + 1];
+      $vetor[$i + 1] = $ordem;
+      $maior = 1;
+    }
+  }
+  echo "<b> DECRESCENTE </b><br>";
+  foreach ($vetor as $chave => $valor)
+    echo "[$chave] $valor <br>";
+  echo "<br>";
   ?>
 
   <!-- Optional JavaScript; choose one of the two! -->
