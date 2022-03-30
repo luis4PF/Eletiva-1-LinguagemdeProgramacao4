@@ -28,7 +28,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="resposta.php" method="POST">
-                                <div class="row">
+                                <div class="row ">
                                     <div class="col">
                                         <label for="email" class="label-control">
                                             INFORME O EMAIL
@@ -36,7 +36,8 @@
                                         <input type="email" name="email" id="email" class="form-control" />
                                     </div>
                                 </div>
-                                <div class="row">
+
+                                <div class="row mt-2">
                                     <div class="col">
                                         <label for="senha" class="label-control">
                                             INFORME A SENHA
@@ -44,13 +45,12 @@
                                         <input type="password" name="senha" id="senha" class="form-control" />
                                     </div>
                                 </div>
-                            </form>
-
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">ACESSAR</button>
+                            </form>
                         </div>
+                        
                     </div>
                 </div>
             </div>
