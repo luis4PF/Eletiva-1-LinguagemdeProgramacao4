@@ -28,6 +28,9 @@
             $_SESSION['usuario'] = $email;
             $_SESSION['acesso'] = true;
             echo "<b>BEM VINDO USUÁRIO</b> " . $_SESSION['usuario'];
+            echo "<br>";
+            echo '<a href=" sair.php">Sair</a>';
+            
         } else {
 
             header('Location: index.php');
@@ -42,8 +45,6 @@
             exit;
         }
     }
-
-
 
     ?>
 
