@@ -34,13 +34,13 @@
     if ($imc < 18.5)
       echo "ABAIXO DO PESO";
 
-    if ($imc >= 18.6 && $imc <= 24.9)
+    elseif ($imc >= 18.6 && $imc <= 24.9)
       echo "PESO IDEAL PARABENS!!";
 
-    if ($imc >= 25 && $imc <= 29.9)
+    elseif ($imc >= 25 && $imc <= 29.9)
       echo "LEVEMENTE ACIMA DO PESO";
 
-    if ($imc >= 30 && $imc <= 34.9)
+    elseif ($imc >= 30 && $imc <= 34.9)
       echo "OBESIDADE GRAU 1";
 
     if ($imc >= 35 && $imc <= 39.9)
