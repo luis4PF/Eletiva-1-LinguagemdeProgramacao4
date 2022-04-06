@@ -18,20 +18,16 @@
     <b> DESCUBRA O MENOR VALOR </b>
     <form method="post" action="resultado3.4.php" class="row">
         <?php
-        for ($i = 1; $i <= 2; $i++) {
-
+        for ($i = 1; $i <= 5; $i++) {
         ?>
-
             <div class="col-3 mt-3">
                 <label for="valor<?= $i ?>" class="label-control">
                     <!-- "for="valor1<?= $i ?>" significa <?php echo $i; ?> -->
                     INFORME 5 NÚMERO E DESCUBRA A SOMA DE SEUS DIVISORES:
                 </label>
                 <input type="text" step="any" name="valor<?= $i ?>" placeholder="1, 2, 3..." 
-                    id="valor<?= $i ?>" class="form-control" />
-
+                    id="valor<?= $i ?>" class="form-control"/>
             </div>
-
         <?php
         }
         ?>
@@ -44,3 +40,5 @@
         </div>
         <br> <br>
     </form>
+</body>
+</html>

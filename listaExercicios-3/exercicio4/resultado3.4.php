@@ -27,7 +27,7 @@
             return $soma;
         }
     }
-    for ($i = 1; $i <= 2; $i++) {
+    for ($i = 1; $i <= 5; $i++) {
         $vetor[$i] = $_POST["valor$i"];
     }
     foreach ($vetor as $val) {
