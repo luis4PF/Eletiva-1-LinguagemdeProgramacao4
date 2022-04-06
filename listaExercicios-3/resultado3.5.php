@@ -88,7 +88,7 @@
         <th scope="row">ACIMA DE 40</th>
         <td colspan="2">OBESIDADE GRAU III (MÓRBIDA)</td>
       </tr>
-      <tr class="table-dark">
+      <tr class="table-danger">
         <th scope="row">SEU IMC <?= imc($altura, $peso) ?></th>
         <td colspan="2"> <?= classificacao($altura, $peso) ?></td>
       </tr>

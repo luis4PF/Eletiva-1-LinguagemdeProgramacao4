@@ -20,6 +20,7 @@
         <?php
         for ($i = 1; $i <= 10; $i++) {
 
+            
         ?>
 
             <div class="col-3 mt-3">
