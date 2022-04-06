@@ -24,8 +24,9 @@
             if ($valor % $i == 0) {
                 $soma = $soma + $i;
             }
-            return $soma;
+           
         }
+        return $soma;
     }
     for ($i = 1; $i <= 5; $i++) {
         $vetor[$i] = $_POST["valor$i"];
