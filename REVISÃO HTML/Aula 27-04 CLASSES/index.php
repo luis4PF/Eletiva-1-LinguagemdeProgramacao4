@@ -8,11 +8,30 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>CLASSES</title>
+    <title>ORIENTAÇÃO A OBJETOS EM PHP</title>
   </head>
   <body>
-    <h1>CLASSES</h1>
-    
+    <?php
+
+        require_once("Impressora.php");
+        require_once("Matricial.php");
+        require_once("Laser.php");
+
+        $impressora = new Impressora();
+        $impressora -> setMarca("Classe Impressora!");
+
+        $matricial = new Matricial("HP", "01", 10, true, true, 10);
+
+        $laser = new Laser("HP", "02", 15, true, true, 11);
+
+        var_dump($impressora);
+
+        echo "<br>";
+
+        var_dump($matricial);
+
+    ?>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
