@@ -13,7 +13,7 @@
 
     //ADICIONAR AS ROTAS VALIDAS ABAIXO
 
-    $router->get("/OLÁ-MUNDO", function(){
+    $router->get("/ola-mundo", function(){
         return "Olá Mundo";
     });    
 
@@ -30,3 +30,4 @@
     echo $result($router->getParams());
 
     //view + terminal // php -S localhost:8000 -t public para executar 
+    //localhost:8000/ola-mundo // pesquisar na url do google
