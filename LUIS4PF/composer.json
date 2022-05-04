@@ -1,0 +1,15 @@
+{
+    "name": "aluno/luis4pf",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\Luis4pf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luis4pf",
+            "email": "luishtardem@gmail.com"
+        }
+    ],
+    "require": {}
+}
