@@ -1,5 +1,7 @@
 <?php
 
+use Aluno\Luis4pf\Controller\ExercicioController;
+
     require_once __DIR__."/vendor/autoload.php";
 
     //aqui a gente recupera oque o usuario digitou 
@@ -17,6 +19,8 @@
         return "Olá Mundo";
     });    
 
+    $router->get('/exemplo', ExercicioController::exibir());
+
 
     //ADICIONAR AS ROTAS VALIDAS ACIMA
 
@@ -29,5 +33,5 @@
     }
     echo $result($router->getParams());
 
-    //view + terminal // php -S localhost:8000 -t public para executar 
+    //view + terminal // php -S localhost:8000 -t public/ para executar 
     //localhost:8000/ola-mundo // pesquisar na url do google
