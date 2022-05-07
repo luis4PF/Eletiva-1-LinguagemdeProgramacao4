@@ -10,8 +10,25 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="container">
+    <h1>exemplo</h1>
+    <form method="POST" action="/exemplo-resultado">
+    <div class="row">
+        <div class="col">
+            <label class="label-control"> valor 1 </label>
+            <input class="form-control" name="valor1" type="text"/>
+        </div>
+        <div class="col">
+            <label class="label-control"> valor 2 </label>
+            <input class="form-control" name="valor1" type="text"/>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col">
+            <button type="submit" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+    </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

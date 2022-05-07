@@ -1,7 +1,5 @@
 <?php
 
-use Aluno\Luis4pf\Controller\ExercicioController;
-
     require_once __DIR__."/vendor/autoload.php";
 
     //aqui a gente recupera oque o usuario digitou 
@@ -19,7 +17,9 @@ use Aluno\Luis4pf\Controller\ExercicioController;
         return "Olá Mundo";
     });    
 
-    $router->get('/exemplo', ExercicioController::exibir());
+    $router->get('/exemplo', "Aluno\Luis4pf\Controller\ExercicioController::exibir");
+
+    $router->post("/exemplo-resultado", "Aluno\Luis4pf\Controller\ExercicioController::exibirResultado");
 
 
     //ADICIONAR AS ROTAS VALIDAS ACIMA
