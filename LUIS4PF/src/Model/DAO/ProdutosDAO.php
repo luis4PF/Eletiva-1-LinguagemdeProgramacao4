@@ -2,13 +2,13 @@
 
 namespace Aluno\Luis4pf\Model\DAO;
 
-use Aluno\Luis4pf\Model\Entity\Clientes;
+use Aluno\Luis4pf\Model\Entity\Produtos;
 
-class ClientesDAO{
+class ProdutosDAO{
 
-    public function inserir(Clientes $c){
+    public function inserir(Produtos $p){
         try{
-            $sql = "INSERT INTO `clientes`(`nome`, `e-mail`, `idade`) VALUES (:nome, :email, :idade)";
+            $sql = "INSERT INTO `clientes`(`nome`, `descricao`, `valor`) VALUES (:nome, :descricao, :valor)";
 
         } catch(\Exception $e){
             return false;
@@ -16,9 +16,9 @@ class ClientesDAO{
     }
 
     
-    public function alterar(Clientes $c){
+    public function alterar(Produtos $p){
         try{
-            $sql = "UPDATE `clientes` SET `nome`=:nome,`e-mail`=:email,`idade`=:idade WHERE id = :id";
+            $sql = "UPDATE `Produtos` SET `nome`=:nome,`descricao`=:descricao,`valor`=:valor WHERE id = :id";
 
         } catch(\Exception $e){
             return false;
@@ -27,7 +27,7 @@ class ClientesDAO{
 
     public function excluir($id){
         try{
-            $sql = "DELETE FROM `clientes` WHERE id = :id";
+            $sql = "DELETE FROM `produtos` WHERE id = :id";
 
         } catch(\Exception $e){
             return false;
@@ -36,7 +36,7 @@ class ClientesDAO{
 
     public function consultar(){
         try{
-            $sql = "SELECT * FROM clientes";
+            $sql = "SELECT * FROM produtos";
 
         } catch(\Exception $e){
             return false;
@@ -45,7 +45,7 @@ class ClientesDAO{
 
     public function consultarPorId($id){
         try{
-            $sql = "SELECT * FROM clientes WHERE id = :id";
+            $sql = "SELECT * FROM produtos WHERE id = :id";
 
         } catch(\Exception $e){
             return false;
