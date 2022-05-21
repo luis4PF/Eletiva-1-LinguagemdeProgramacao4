@@ -24,7 +24,7 @@ class Clientes{
         $this->nome = $nome;
     }
 
-    public function getEmai(){
+    public function getEmail(){
         return $this->email;
     }
 
