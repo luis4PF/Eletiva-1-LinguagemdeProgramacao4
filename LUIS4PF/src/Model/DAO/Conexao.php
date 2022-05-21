@@ -1,6 +1,8 @@
 <?php
 
 namespace Aluno\Luis4pf\Model\DAO;
+use PDO;
+
 class Conexao{
     public static function conectar(){
         return 
